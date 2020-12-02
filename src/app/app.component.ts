@@ -8,7 +8,6 @@ import {QUOTES} from './models/database';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'bestQuotes';
   showForm = false;
   quotes: Quotation[] = QUOTES;
   quotation: Quotation = {author: '', sentence: '', votes: 0};
@@ -21,5 +20,9 @@ export class AppComponent {
   addQuotation() {
     this.quotes.unshift(this.quotation);
     this.quotation = {author: '', sentence: '', votes: 0};
+  }
+
+  addVote(quotation: Quotation, value: number): void {
+    quotation.votes += value;
   }
 }
