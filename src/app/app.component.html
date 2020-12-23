@@ -1,4 +1,4 @@
-<app-navbar></app-navbar>
+<app-navbar title="Najlepsze Cytaty"></app-navbar>
 
 <div class="container q-container">
   <button class="btn-floating teal add-button" (click)="onSwitchForm()">
@@ -44,8 +44,8 @@
     </div>
 
     <div class="col s4">
-      <app-ranking [quotes]="bestQuotes()"></app-ranking>
-      <app-ranking [quotes]="worstQuotes()"></app-ranking>
+      <app-ranking [quotes]="bestQuotes()" title="Najlepsze"></app-ranking>
+      <app-ranking [quotes]="worstQuotes()" title="Najgorsze"></app-ranking>
     </div>
   </div>
 </div>

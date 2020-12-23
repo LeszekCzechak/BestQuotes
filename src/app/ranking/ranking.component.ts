@@ -11,4 +11,7 @@ export class RankingComponent {
   @Input()
   quotes: Quotation[];
 
+  @Input()
+  title: string;
+
 }
